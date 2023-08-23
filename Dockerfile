@@ -1,6 +1,6 @@
 FROM openjdk
 
-WORDDIR /application
+WORKDIR /application
 
 COPY ahmed.java .
 
