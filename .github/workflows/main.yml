@@ -25,8 +25,8 @@ jobs:
               - name: 'after'
                 run: ls
               - name: "login to docker hub"
-                run: docker login --username ${{secrets.DOCKER_USERNAME}} --password ${{secrets.DOCKER_TOKEN}}
+                run: docker login --username ${{ secrets.DOCKER_USERNAME }} --password ${{ secrets.DOCKER_TOKEN }}
               - name: "building docker image"
-                run: docker build -t ${{secrets.DOCKER_USERNAME}}/myimage .
+                run: docker build -t ${{ secrets.DOCKER_USERNAME }}/myimage .
               - name: "pushing to docker hub"
-                run: docker push ${{secrets.DOCKER_USERNAME}}/myimage .    
+                run: docker push ${{ secrets.DOCKER_USERNAME }}/myimage
